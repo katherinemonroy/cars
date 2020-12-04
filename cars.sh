@@ -26,7 +26,7 @@ read -r INPUT
 		echo "Added to inventory";;
 		"2") echo "Here's the list of current cars in the inventory:"
 		echo ""
-		cat my_old_cars.txt | while read line
+		my_old_cars.txt | while read -r
 		do
 			sed 's/\:/\ /g' | sort -k 1
 		done
