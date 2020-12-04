@@ -12,17 +12,17 @@ Option 1: Add a car
 Option 2: View list of cars
 Option 3: Quit
 ----------------------------"
-read INPUT
+read -r INPUT
 
 	case "$INPUT" in
 		"1") echo "Enter car year (e.g. 2003):"
-		read YEAR
+		read -r YEAR
 		echo "Enter car make (e.g. Toyota):"
-		read MAKE
+		read -r MAKE
 		echo "Enter car model (e.g. Camry):"
-		read MODEL
+		read -r MODEL
 		concatString="$YEAR$sep$MAKE$sep$MODEL"
-		echo $concatString >> my_old_cars.txt
+		echo "$concatString" >> my_old_cars.txt
 		echo "Added to inventory";;
 		"2") echo "Here's the list of current cars in the inventory:"
 		echo ""
